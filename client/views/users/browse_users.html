@@ -1,0 +1,26 @@
+<template name="browseUsers">
+  <div class="row">
+    <div class="twelve columns">
+      <form data-id="search-users-form">
+        <input type="text" class="u-full-width" placeholder="Search users..." data-id="search-query">
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      {{#each users}}
+        {{> smallProfile user=this}}
+      {{/each}}
+      {{#if Template.subscriptionsReady}}
+        {{#unless instance.usersCount.get}}
+          <div class="alert info">There are no matching users to display</div>
+        {{/unless}}
+        {{#if hasMoreUsers}}
+          <button class="u-full-width" data-id="load-more">Load more</button>
+        {{/if}}
+      {{else}}
+        <div class="text-center">Loading users...</div>
+      {{/if}}
+    </div>
+  </div>
+</template>

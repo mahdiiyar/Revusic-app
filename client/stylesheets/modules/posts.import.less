@@ -1,0 +1,130 @@
+.post {
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  p.formatted-date, a.author {
+    color: #2f2d2d;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .avatar {
+    margin-right: 5px;
+  }
+  .highlight-username {
+    background: #FFEDCA;
+  }
+  margin-bottom: 20px;
+}
+
+form.search-posts-form {
+  margin-bottom: 0;
+  input {
+    margin-bottom: 0;
+  }
+}
+
+.review {
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+  white-space: normal;
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  p.formatted-date, a.author {
+    color: #2f2d2d;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .avatar {
+    margin-right: 5px;
+  }
+  .highlight-username {
+    background: #FFEDCA;
+  }
+  margin-bottom: 20px;
+}
+
+form.search-posts-form {
+  margin-bottom: 0;
+  input {
+    margin-bottom: 0;
+  }
+}
+
+form.search-reviews-form {
+  margin-bottom: 0;
+  input {
+    margin-bottom: 0;
+  }
+}
+
+button.remove-post {
+  margin-top: -8px;
+}
+
+button.remove-review {
+  margin-top: -8px;
+}
+
+ul.feed-filter {
+  list-style: none;
+  margin-bottom: 0;
+  display: inline-block;
+  li {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 10px;
+    button {
+      margin-bottom: 0;
+      &.active {
+        background: rgba(0, 0, 0, .1);
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+textarea {
+  &.insert-post-form {
+    min-height: 39px;
+  }
+  &.message-body-form {
+    min-height: 200px;      
+  }
+}
+
+[data-id="insert-post-form"] { 
+  .-autocomplete-container {
+    margin-top: 15px;
+  }
+  input[type="submit"].disabled,
+  input[type="submit"].disabled:hover {
+    opacity: 0.3;   
+    cursor: default;
+    background-color: #8f8e88;
+    border-color: #8f8e88;
+  }
+}
+
+[data-id="insert-review-form"] {
+  .-autocomplete-container {
+    margin-top: 15px;
+  }
+  input[type="submit"].disabled,
+  input[type="submit"].disabled:hover {
+    opacity: 0.3;
+    cursor: default;
+    background-color: #8f8e88;
+    border-color: #8f8e88;
+  }
+}

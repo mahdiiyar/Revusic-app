@@ -1,0 +1,46 @@
+<template name="reviews">
+    <div class="row">
+        <div class="twelve columns">
+            <form class="search-reviews-form" data-id="search-reviews-form">
+                <input type="text" class="u-full-width" placeholder="Search reviews..." data-id="search-query">
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="twelve columns">
+            <div class="text-center">
+                <ul class="feed-filter">
+                    <li><button type="button" class="{{activeIfFilterIs 'all'}}" data-id="all">All</button></li>
+                    <li><button type="button" class="{{activeIfFilterIs 'following'}}" data-id="following">Following</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="twelve columns">
+            <form data-id="insert-review-form">
+                {{>textareaAutocomplete settings=settings data-id="body" class="u-full-width insert-review-form" rows="1" placeholder="Write a review..." }}
+                <input type="submit" class="button-primary u-pull-right" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            {{#each reviews}}
+                {{> review review=this}}
+            {{/each}}
+            {{#if Template.subscriptionsReady}}
+                {{#unless instance.reviewsCount.get}}
+                    <div class="alert info">There are no matching reviews to display</div>
+                {{/unless}}
+                {{#if hasMoreReviews}}
+                    <button class="u-full-width" data-id="load-more">Load more</button>
+                {{/if}}
+            {{else}}
+                <div class="text-center">Loading reviews...</div>
+            {{/if}}
+        </div>
+    </div>
+</template>

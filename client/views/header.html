@@ -1,0 +1,18 @@
+<template name="header">
+  <header class="main-header">
+    <div class="container">
+      <ul>
+        <li>
+          <a href="/">
+            <img class="logo" src="/img/logo-revusic.png" alt="Revusic Logo" />
+          </a>
+        </li>
+        {{#if currentUser}}
+          <li class="u-pull-right sign-out">
+            <button data-id="sign-out">Sign Out <i class="fa fa-sign-out fa-lg"></i></button>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </header>
+</template>

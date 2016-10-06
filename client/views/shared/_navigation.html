@@ -1,0 +1,37 @@
+<template name="navigation">
+  <div class="row">
+    <div class="twelve columns">
+      <div class="navigation">
+        <ul>
+          <li class="{{activeIfRouteNameIs 'social'}}">
+            <a href="{{pathFor 'social'}}"><i class="fa fa-newspaper-o"></i> Social</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'reviews'}}">
+            <a href="{{pathFor 'reviews'}}"><i class="fa fa-music"></i> Reviews</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'music'}}">
+            <a href="{{pathFor 'music'}}"><i class="fa fa-play"></i> Music</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'browseUsers'}}">
+            <a href="{{pathFor 'browseUsers'}}"><i class="fa fa-users"></i> Find Friends</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'messages'}}">
+            <a href="{{pathFor 'messages'}}"><i class="fa fa-envelope"></i> Messages {{getUnreadCount}}</a>
+          </li>    
+        </ul>
+        <hr>
+        <ul>
+          <li class="{{activeIfRouteNameIs 'following'}}">
+            <a href="{{pathFor 'following'}}"><i class="fa fa-arrow-left"></i> <i class="fa fa-user"></i> Following</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'follower'}}">
+            <a href="{{pathFor 'follower'}}"><i class="fa fa-arrow-right"></i> <i class="fa fa-user"></i> Followers</a>
+          </li>
+          <li class="{{activeIfRouteNameIs 'updateProfile'}}">
+            <a href="{{pathFor 'updateProfile'}}"><i class="fa fa-cogs"></i> Update profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
